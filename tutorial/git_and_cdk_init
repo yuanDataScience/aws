@@ -1,0 +1,18 @@
+procedure to create git and establish development environment on ubuntu 20.04
+1. in github account/settings, generate the personal token, save it on local computer
+2. install gcmcore by:
+	wget "https://github.com/microsoft/Git-Credential-Manager-Core/releases/download/v2.0.498/gcmcore-linux_amd64.2.0.498.54650.deb" -O /tmp/gcmcore.deb
+	sudo dpkg -i /tmp/gcmcore.deb
+	git-credential-manager-core configure
+3. configure the gcmcore by:
+	git config --global credential.credentialStore plaintext	
+4. when you use git push, it will ask you the password. copy and paste the personal token to password promp
+5 you are done!
+
+
+procedure to create AWS cdk project:
+1. create a project folder and then enter the folder
+2. type 'cdk init'
+3. remove virtual environment created by cdk by 'rm -Rf .venv'
+4. open the project by pycharm 
+5. follow pycharm's pop up window to create the virtual environment
